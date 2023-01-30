@@ -56,6 +56,9 @@ section::after {
   content: "";
   display: table;
   clear: both;
+  position: fixed;
+  width: 300px;
+  height: 200px;
 }
 
 /* Style the footer */
@@ -64,6 +67,10 @@ footer {
   padding: 10px;
   text-align: center;
   color: white;
+  position: fixed;
+  bottom: 0;
+  height: 8%;
+  width: 100%;
 }
 
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
@@ -86,13 +93,13 @@ footer {
     <ul>
       <li><img src="SPT.gif" alt="Description of image" width="170" height="150"></a></li>
 
-      <h2>1st JavaScript</h2>
+      <h4>1st JavaScript</h4>
       <button type="button"
       onclick="document.getElementById('demo').innerHTML = Date()">
       Click to display Date and Time.</button>
       <p id="demo"></p>
 
-      <h2>2nd JavaScript</h2>
+      <h4>2nd JavaScript</h4>
       <p id="demo1"></p>
 
       <script>
@@ -103,8 +110,22 @@ footer {
       document.getElementById("demo1").innerHTML = y;
       </script>
       
+      <h4>3rd JavaScript if statement</h4>
 
-      <li></a></li>
+      <p>Display "Good day!" if the hour is less than 18:00:</p>
+
+      <p id="demo3">Good Evening!</p>
+
+      <script>
+      if (new Date().getHours() < 18) {
+      document.getElementById("demo3").innerHTML = "Good day!";
+      }
+      </script>
+
+
+
+      
+
       <li></a></li>
     </ul>
   </nav>
