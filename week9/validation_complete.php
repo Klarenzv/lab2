@@ -106,9 +106,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     $servername = "localhost";
+<<<<<<< HEAD
     $username = "webprogss211";
     $password = "webprogss211";
     $dbname = "webprogss211";
+=======
+    $username = "root";
+    $password = "";
+    $dbname = "database1";
+>>>>>>> 3f2aa3addf2bee9287f469557bc12d6595674731
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -117,8 +123,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Connection failed: " . $conn->connect_error);
     }
 
+<<<<<<< HEAD
     $sql = "INSERT INTO kavillanueva_myguests (name, email, website, comment, gender)
     VALUES ('$name', '$email', '$website', '$comment', '$gender')";
+=======
+    $sql = "INSERT INTO MyGuests (firstname, lastname, email)
+    VALUES ('$name', '   ', '$email')";
+>>>>>>> 3f2aa3addf2bee9287f469557bc12d6595674731
 
     if ($conn->query($sql) === TRUE) {
       echo "New record created successfully";
