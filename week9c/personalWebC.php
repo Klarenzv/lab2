@@ -358,9 +358,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "database1";
+    $username = "webprogss211";
+    $password = "webprogss211";
+    $dbname = "webprogss211";
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -369,7 +369,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "INSERT INTO MyGuests (firstname, lastname, email)
+    $sql = "INSERT INTO kavillanueva_myguests (firstname, lastname, email)
     VALUES ('$name', '   ', '$email')";
 
     if ($conn->query($sql) === TRUE) {

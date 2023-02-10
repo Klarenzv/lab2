@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "webprogss211";
+$password = "webprogss211";
 $dbname = "webprogss211";
 
 // Create connection
@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "INSERT INTO kavillanueva_myguests (name, email, website, comment, gender)
-VALUES ('omega', 'kavillanueva@example.com', 'wasd', '', '')";
+VALUES ('omega', 'kavillanueva@example.com', 'http://localhost/lab2', 'Noice!', 'Male')";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
